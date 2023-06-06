@@ -1,0 +1,16 @@
+// Find the top 10 products having worst sales rank
+
+[
+  {
+    $sort: {
+      salesrank: -1, // Sort in descending order based on the total number of reviews
+    },
+  },
+  {
+    $limit:
+      /**
+       * Provide the number of documents to limit.
+       */
+      10,
+  },
+]
